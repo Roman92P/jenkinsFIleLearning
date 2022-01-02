@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'smth'
+                input{
+                    string(name:'String', defaultValue:'None', description:'input string')
+                }
             }
         }
     }
