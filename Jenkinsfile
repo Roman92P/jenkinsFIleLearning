@@ -3,11 +3,12 @@ pipeline{
     stages {
             stage('Hello') {
                 steps {
-//                     input{
-//                         message "Give input string"
-//                         string(name:'Test string', defaultValue='<empty>', description:'Some test string')
-//                     }
-                echo 'Hello'
+                    input {
+                                    message "Give string input"
+                                    parameters {
+                                        string(name: 'Test_String', defaultValue: 'None', description: 'Put some test string')
+                                    }
+                                }
                 }
             }
         }
