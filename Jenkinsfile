@@ -5,9 +5,7 @@ pipeline {
             steps {
                 input {
                     message "Give string"
-                    parameters{
                         string(name:'String', defaultValue:'None', description:'input string')
-                    }
                 }
             }
         }
