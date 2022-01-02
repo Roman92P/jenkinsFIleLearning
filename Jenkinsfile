@@ -4,8 +4,10 @@ pipeline {
         stage('Build') {
             steps {
                 input{
-                    message:'Give string'
-                    string(name:'String', defaultValue:'None', description:'input string')
+                    message:'Give string',
+                    parameters{
+                        string(name:'String', defaultValue:'None', description:'input string')
+                    }
                 }
             }
         }
