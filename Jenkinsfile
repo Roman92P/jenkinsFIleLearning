@@ -1,8 +1,14 @@
 pipeline{
-    agent none
-    stages{
+    agent any
         stage('Input stage'){
-            echo 'asdas'
+            steps{
+                echo 'Input'
+                input{
+                    message('Add some string')
+                    parameters{
+                        string(name:'String', defaultValue:'None', description:'description')
+                    }
+                }
+            }
         }
-    }
 }
