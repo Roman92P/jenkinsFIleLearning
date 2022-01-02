@@ -1,9 +1,17 @@
 pipeline {
     agent any
+
     stages {
-        stage('Build') {
+      stage('User input') {
+            input {
+                message "Give some string"
+                ok "Test input"
+                parameters {
+                    string(name: 'String', defaultValue: 'None', description: 'Test string input')
+                }
+            }
             steps {
-                echo 'print smth'
+                echo "Your string ${String}"
             }
         }
     }
