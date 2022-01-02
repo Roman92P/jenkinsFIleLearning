@@ -7,11 +7,11 @@ pipeline {
                 message "Give some string"
                 ok "Test input"
                 parameters {
-                    string(name: 'String', defaultValue: 'None', description: 'Test string input')
+                    string(name: 'testString', defaultValue: 'None', description: 'Test string input')
                 }
             }
             steps {
-                echo "Your string ${String}"
+                echo "Your string ${testString}"
             }
         }
     }
